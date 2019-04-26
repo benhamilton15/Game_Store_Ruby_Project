@@ -24,6 +24,13 @@ class Publisher
     @id = results.first['id'].to_i
   end
 
+  def delete()
+    sql = "DELETE FROM publishers
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = "SELECT * FROM publishers"
     publishers_data = SqlRunner.run( sql )
@@ -38,6 +45,18 @@ class Publisher
     result = SqlRunner.run(sql, values).first
     publisher = Publisher.new(result)
     return publisher
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM publishers"
+    SqlRunner.run( sql )
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM publishers
+    WHERE id = $1"
+    values = [id]
+    SqlRunner.run(sql, values)
   end
 
   def self.map_items(publishers_data)

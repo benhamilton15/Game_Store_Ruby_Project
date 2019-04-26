@@ -11,5 +11,5 @@ CREATE TABLE games (
   id SERIAL4 PRIMARY KEY,
   title VARCHAR(255),
   stock INT4,
-  publisher_id INT8 REFERENCES publishers(id)
+  publisher_id INT8 REFERENCES publishers(id) ON DELETE CASCADE
 );
