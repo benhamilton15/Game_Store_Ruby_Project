@@ -29,6 +29,14 @@ def save()
   @id = results.first['id'].to_i
 end
 
+def delete()
+  sql = "DELETE FROM games
+  WHERE id = $1"
+  values = [@id]
+  SqlRunner.run(sql, values)
+end
+
+
 def self.all()
   sql = "SELECT * FROM games"
   games_data = SqlRunner.run( sql )
@@ -36,9 +44,25 @@ def self.all()
   return games
 end
 
+def self.find(id)
+  sql = "SELECT * FROM games
+  WHERE id = $1"
+  values = [id]
+  result = SqlRunner.run(sql, values).first
+  game = Game.new(result)
+  return game
+end
+
 def self.delete_all()
   sql = "DELETE FROM games"
   SqlRunner.run( sql )
+end
+
+def self.delete(id)
+  sql = "DELETE FROM games
+  WHERE id = $1"
+  values = [id]
+  SqlRunner.run(sql, values)
 end
 
 def self.map_items(games_data)
