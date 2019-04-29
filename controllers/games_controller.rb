@@ -22,3 +22,9 @@ get '/games/:id' do
   @game = Game.find(params['id'])
   erb(:"/games/show")
 end
+
+get '/games/:id/edit' do
+  @game = Game.find(params['id'])
+  @publishers = Publisher.all()
+  erb(:"/games/edit")
+end
