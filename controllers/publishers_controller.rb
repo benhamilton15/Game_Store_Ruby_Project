@@ -16,3 +16,8 @@ post '/publishers' do
   Publisher.new(params).save
   redirect to '/publishers'
 end
+
+get '/publishers/:id' do
+  @publisher.find(params['id'])
+  erb(:show)
+end
