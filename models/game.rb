@@ -53,6 +53,15 @@ class Game
     SqlRunner.run(sql, values)
   end
 
+  def publisher()
+    sql = "Select * FROM publishers
+    WHERE id = $1"
+    values = [@publisher_id]
+    publisher_data = SqlRunner.run(sql,values).first
+    publisher = Publisher.new(publisher_data)
+    return publisher
+  end
+
 
   def self.all()
     sql = "SELECT * FROM games"
