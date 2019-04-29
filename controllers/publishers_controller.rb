@@ -11,3 +11,8 @@ end
 get '/publishers/new' do
   erb(:"publishers/new")
 end
+
+post '/publishers' do
+  Publisher.new(params).save
+  redirect to '/publishers'
+end
