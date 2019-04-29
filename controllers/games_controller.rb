@@ -17,3 +17,8 @@ post '/games' do
   Game.new(params).save
   redirect to '/games'
 end
+
+get '/games/:id' do
+  @game = Game.find(params['id'])
+  erb(:"/games/show")
+end
