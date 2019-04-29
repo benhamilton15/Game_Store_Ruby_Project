@@ -1,4 +1,4 @@
-equire( 'sinatra' )
+require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative("../models/game")
 also_reload( '../models/*' )
