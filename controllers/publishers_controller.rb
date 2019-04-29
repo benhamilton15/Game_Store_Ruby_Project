@@ -18,6 +18,6 @@ post '/publishers' do
 end
 
 get '/publishers/:id' do
-  @publisher.find(params['id'])
-  erb(:show)
+  @publisher = Publisher.find(params['id'])
+  erb(:"/publishers/show")
 end
