@@ -7,3 +7,7 @@ get '/publishers' do
   @publishers = Publisher.all()
   erb (:"publishers/index")
 end
+
+get '/publishers/new' do
+  erb(:"publishers/new")
+end
