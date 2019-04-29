@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Game
 
-  attr_reader :id, :publisher_id
+  attr_reader :id, :publisher_id, :stock
   attr_accessor :title
 
   def initialize(options)

@@ -40,6 +40,15 @@ class Publisher
     SqlRunner.run(sql, values)
   end
 
+  def games()
+    sql = "SELECT * FROM games
+    WHERE publisher_id = $1"
+    values = [@id]
+    games_data = SqlRunner.run(sql, values)
+    games = games_data.map { |game| Game.new(game)  }
+    return games
+  end
+
   def self.all()
     sql = "SELECT * FROM publishers"
     publishers_data = SqlRunner.run( sql )
