@@ -1,0 +1,10 @@
+<h1>Games</h1>
+
+<% @games.each do |game| %>
+
+<h3> <a href="games/<%= game.id %>"><%= game.title %></a></h3>
+<p>Stock: <%= game.stock %></p>
+<p>Publisher: <%= game.publisher() %></p>
+
+
+<% end %>
