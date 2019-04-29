@@ -34,3 +34,9 @@ post '/games/:id' do
   publisher.update()
   redirect to "/games/#{params['id']}"
 end
+
+post '/games/:id/delete' do
+  game = Game.find(params['id'])
+  game.delete
+  redirect to '/games'
+end
