@@ -7,3 +7,13 @@ get '/games' do
   @games = Game.all()
   erb (:"games/index")
 end
+
+get '/games/new' do
+  @publishers = Publisher.all()
+  erb(:"games/new")
+end
+
+post '/games' do
+  Game.new(params).save
+  redirect to '/games'
+end
