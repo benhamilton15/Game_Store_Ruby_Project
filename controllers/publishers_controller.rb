@@ -26,3 +26,15 @@ get '/publishers/:id/edit' do
   @publisher = Publisher.find(params['id'])
   erb(:"/publishers/edit")
 end
+
+post '/publishers/:id' do
+  publisher = Publisher.new(params)
+  publisher.update()
+  redirect to "/publishers/#{params['id']}"
+end
+
+post '/publishers/:id/delete' do
+  publisher = Publisher.find(params['id'])
+  publisher.delete
+  redirect to '/publishers'
+end
