@@ -24,5 +24,5 @@ end
 
 get '/publishers/:id/edit' do
   @publisher = Publisher.find(params['id'])
-  erb(:edit)
+  erb(:"/publishers/edit")
 end
