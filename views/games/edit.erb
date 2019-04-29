@@ -1,6 +1,6 @@
 <h1>Edit Game</h1>
 
-<form class="" action="/games" method="post">
+<form class="" action="/games/<%= @game.id %>" method="post">
 
   <label for="title">Title: </label>
   <input type="text" name="title" value="<%= @game.title %>" id="title">
@@ -22,6 +22,6 @@
   </select>
   <br><br>
 
-  <input type="submit" value="Add Game"/>
+  <input type="submit" value="Edit Game"/>
 
 </form>

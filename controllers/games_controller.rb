@@ -28,3 +28,9 @@ get '/games/:id/edit' do
   @publishers = Publisher.all()
   erb(:"/games/edit")
 end
+
+post '/games/:id' do
+  publisher = Game.new(params)
+  publisher.update()
+  redirect to "/games/#{params['id']}"
+end
