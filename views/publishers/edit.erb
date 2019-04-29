@@ -1,0 +1,11 @@
+<h1>Edit Publisher</h1>
+
+<form class="" action="/publishers/<%= @publisher.id %>" method="post">
+
+  <label for="name">Name: </label>
+  <input type="text" name="name" value="<% @publisher.name %>" id="name">
+  <br><br>
+
+  <input type="submit" value="Edit Publisher"/>
+
+</form>

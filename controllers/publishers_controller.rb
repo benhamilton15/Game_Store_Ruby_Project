@@ -21,3 +21,8 @@ get '/publishers/:id' do
   @publisher = Publisher.find(params['id'])
   erb(:"/publishers/show")
 end
+
+get '/publishers/:id/edit' do
+  @publisher = Publisher.find(params['id'])
+  erb(:edit)
+end
