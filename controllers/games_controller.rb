@@ -16,6 +16,11 @@ get '/games/new' do
   erb(:"games/new")
 end
 
+get '/games/list' do
+  @games = Game.all()
+  erb (:"games/list")
+end
+
 post '/games' do
   Game.new(params).save
   redirect to '/games'

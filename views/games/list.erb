@@ -1,0 +1,13 @@
+<h1>Games List</h1>
+
+<% @games.each do |game| %>
+
+<h3> <a href="/games/<%= game.id %>"><%= game.title %></a></h3>
+<p>Genre: <%= game.genre.name %></p>
+<a href="/games/<%= game.id %>/edit">Edit</a>
+<br><br>
+<form action="/games/<%= game.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+<br><br>
+
+
+<% end %>
