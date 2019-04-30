@@ -1,8 +1,9 @@
 require_relative('../db/sql_runner')
+require_relative('./genre')
 
 class Game
 
-  attr_reader :id, :publisher_id, :stock, :genre
+  attr_reader :id, :publisher_id, :stock
   attr_accessor :title
 
   def initialize(options)
@@ -10,7 +11,7 @@ class Game
     @title = options['title']
     @stock = options['stock'].to_i
     @publisher_id = options['publisher_id'].to_i
-    @genre_id = options['genre_id']
+    @genre_id = options['genre_id'].to_i
   end
 
   def save()
@@ -18,14 +19,15 @@ class Game
     (
       title,
       stock,
+      genre_id,
       publisher_id
     )
     VALUES
     (
-      $1, $2, $3
+      $1, $2, $3, $4
     )
     RETURNING id"
-    values = [@title, @stock, @publisher_id]
+    values = [@title, @stock, @genre_id, @publisher_id]
     results = SqlRunner.run(sql,values)
     @id = results.first['id'].to_i
   end
@@ -36,14 +38,15 @@ class Game
     (
       title,
       stock,
+      genre_id,
       publisher_id
     )
     =
     (
-      $1, $2, $3
+      $1, $2, $3, $4
     )
-    WHERE id = $4"
-    values = [@title, @stock, @publisher_id, @id]
+    WHERE id = $5"
+    values = [@title, @stock, @genre_id, @publisher_id, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -68,7 +71,7 @@ class Game
     WHERE id = $1"
     values = [@genre_id]
     genre_data = SqlRunner.run(sql,values).first
-    genre = Publisher.new(genre_data)
+    genre = Genre.new(genre_data)
     return genre
   end
 

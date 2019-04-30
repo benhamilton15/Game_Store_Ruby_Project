@@ -17,7 +17,6 @@ genre2.save()
 genre3.save()
 genre4.save()
 
-
 publisher1 = Publisher.new({
   "name" => "Blizzard"
   })
@@ -36,6 +35,7 @@ publisher1 = Publisher.new({
     {
       "title" => "Overwatch",
       "stock" => 100,
+      "genre_id" => genre2.id,
       "publisher_id" => publisher1.id
     }
   )
@@ -46,6 +46,7 @@ publisher1 = Publisher.new({
     {
       "title" => "The Legend of Zelda",
       "stock" => 1000,
+      "genre_id" => genre3.id,
       "publisher_id" => publisher2.id
     }
   )
