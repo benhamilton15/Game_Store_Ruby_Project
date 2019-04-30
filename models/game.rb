@@ -3,7 +3,7 @@ require_relative('./genre')
 
 class Game
 
-  attr_reader :id, :publisher_id, :stock
+  attr_reader :id, :publisher_id, :stock, :genre_id
   attr_accessor :title
 
   def initialize(options)

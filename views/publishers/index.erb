@@ -5,6 +5,7 @@
 <h3> <a href="publishers/<%= publisher.id %>"><%= publisher.name %></a></h3>
 <p><% publisher.games.each do |game| %></p>
 <p>Name: <a href="games/<%= game.id %>"><%= game.title %></a></p>
+<p>Genre: <%= game.genre.name %></p>
 <p>Stock Count: <%= game.stock %></p>
 <p>Stock Level: <%= game.stock_level %></p>
 

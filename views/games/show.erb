@@ -1,9 +1,9 @@
 <h2><%= @game.title %></h2>
 
+<p>Genre: <%= @game.genre.name %></p>
 <p>Stock Count: <%= @game.stock %></p>
 <p>Stock Level: <%= @game.stock_level %></p>
 <p>Publisher: <a href="/publishers/<%= @game.publisher_id %>"><%= @game.publisher.name %></p>
-
 
 
 <a href="/games/<%= @game.id %>/edit">Edit</a>

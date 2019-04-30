@@ -1,6 +1,8 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative("../models/game")
+require_relative("../models/publisher")
+require_relative("../models/genre")
 also_reload( '../models/*' )
 
 get '/games' do
@@ -10,6 +12,7 @@ end
 
 get '/games/new' do
   @publishers = Publisher.all()
+  @genres = Genre.all()
   erb(:"games/new")
 end
 
@@ -26,6 +29,7 @@ end
 get '/games/:id/edit' do
   @game = Game.find(params['id'])
   @publishers = Publisher.all()
+  @genres = Genre.all()
   erb(:"/games/edit")
 end
 
