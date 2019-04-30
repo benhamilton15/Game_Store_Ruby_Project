@@ -62,6 +62,19 @@ class Game
     return publisher
   end
 
+  def stock_level()
+    if (@stock < 50 && @stock > 0)
+      return 'Low'
+    elsif (@stock >= 50 && @stock <= 300)
+      return 'Medium'
+    elsif @stock > 300
+      return 'High'
+    else
+      return 'OUT OF STOCK'
+    end
+
+  end
+
 
   def self.all()
     sql = "SELECT * FROM games"

@@ -3,8 +3,9 @@
 <% @games.each do |game| %>
 
 <h3> <a href="games/<%= game.id %>"><%= game.title %></a></h3>
-<p>Stock: <%= game.stock %></p>
-<p>Publisher: <%= game.publisher.name() %></p>
+<p>Stock Count: <%= game.stock %></p>
+<p>Stock Level: <%= game.stock_level %></p>
+<p>Publisher: <a href="publishers/<%= game.publisher_id %>"><%= game.publisher.name %></a></p>
 
 
 <% end %>
