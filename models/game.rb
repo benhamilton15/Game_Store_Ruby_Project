@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Game
 
-  attr_reader :id, :publisher_id, :stock
+  attr_reader :id, :publisher_id, :stock, :genre
   attr_accessor :title
 
   def initialize(options)
@@ -10,6 +10,7 @@ class Game
     @title = options['title']
     @stock = options['stock'].to_i
     @publisher_id = options['publisher_id'].to_i
+    @genre_id = options['genre_id']
   end
 
   def save()
