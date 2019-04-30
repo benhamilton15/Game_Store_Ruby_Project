@@ -7,7 +7,7 @@ class Genre
   attr_reader :id, :name
 
   def initialize(options)
-    @id = options['id']to_i if options['id']
+    @id = options['id'].to_i if options['id']
     @name = options['name']
   end
 
@@ -41,6 +41,11 @@ class Genre
     genre_data = SqlRunner.run(sql)
     genres = map_items(genre_data)
     return genres
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM genres"
+    SqlRunner.run( sql )
   end
 
   def self.map_items(genre_data)

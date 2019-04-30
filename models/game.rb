@@ -63,6 +63,15 @@ class Game
     return publisher
   end
 
+  def genre()
+    sql = "Select * FROM genres
+    WHERE id = $1"
+    values = [@genre_id]
+    genre_data = SqlRunner.run(sql,values).first
+    genre = Publisher.new(genre_data)
+    return genre
+  end
+
   def stock_level()
     if (@stock < 50 && @stock > 0)
       return 'Low'

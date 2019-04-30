@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS games ;
+DROP TABLE IF EXISTS genres ;
 DROP TABLE IF EXISTS publishers ;
 
 
