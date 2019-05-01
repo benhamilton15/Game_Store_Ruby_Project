@@ -45,10 +45,39 @@ a:active {
 nav {
   padding: 0px;
   margin: 0px;
-  padding-right: 25px;
+  padding-right: 0;
 }
 
-nav ul li {
-  margin-bottom: 15px;
-  text-transform: uppercase;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+li a {
+  display: block;
+  color: Teal;
+  text-align: center;
+  padding: 14px 62px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+li:last-child {
+  border-right: none;
 }
