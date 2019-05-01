@@ -3,20 +3,27 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   color: #A8F6FF;
-  font-family: Geomanist,Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 18px;
   margin: 0px;
   text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Geomanist,Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   margin: 10px;
   padding: 0px;
 }
 
 h1 {
   font-size: 3em;
+  color: #A8F6FF;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 2.2em;
   color: #A8F6FF;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -67,7 +74,6 @@ li {
 
 li a {
   display: block;
-  color: Teal;
   text-align: center;
   padding: 14px 62px;
   text-decoration: none;
