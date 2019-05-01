@@ -36,6 +36,16 @@ def setup
 )
 end
 
+def test_game_has_title
+  assert_equal('Overwatch', @game1.title)
+end
+
+def test_game_has_stock
+  assert_equal(1000, @game1.stock)
+end
+
+
+
 def test_stock_level__high
   assert_equal('High', @game1.stock_level)
 end
