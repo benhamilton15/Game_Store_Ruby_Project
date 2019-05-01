@@ -29,22 +29,18 @@ h2 {
   margin-top: 20px;
 }
 
-/* A link that has not been visited */
 a:link {
     color: #0AFFFF;
 }
 
-/* A link that has been visited */
 a:visited {
     color: #0AFFFF;
 }
 
-/* A link that is hovered on */
 a:hover {
     color: #0AFFFF;
 }
 
-/* A link that is selected */
 a:active {
     color: #0AFFFF;
 }
@@ -79,7 +75,6 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #111;
 }
