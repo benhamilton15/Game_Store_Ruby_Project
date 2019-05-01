@@ -1,0 +1,9 @@
+.btn {
+  border:3px ;
+  border-radius: 3%;
+  padding: 10px 12px;
+  color: Black;
+  cursor:pointer;
+  font-family: Arial Black, Charcoal, sans-serif;
+  size: 20px;
+}
