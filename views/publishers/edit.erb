@@ -3,7 +3,7 @@
 <form class="" action="/publishers/<%= @publisher.id %>" method="post">
 
   <label for="name">Name: </label>
-  <input type="text" name="name" value="<%= @publisher.name %>" id="name">
+  <input type="text" name="name" value="<%= @publisher.name %>" id="name" required>
   <br><br>
 
   <input type="submit" value="Edit Publisher"/>
