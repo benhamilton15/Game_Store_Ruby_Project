@@ -2,7 +2,7 @@ body {
   background: #222233;
   background-size: 100%;
   background-repeat: no-repeat;
-  color: #A8F6FF;
+  color: #FFADDE;
   font-family: Helvetica,sans-serif;
   font-size: 18px;
   margin: 0px;
@@ -17,14 +17,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  color: #A8F6FF;
+  color: ##FFADDE;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
 h2 {
   font-size: 2.2em;
-  color: #A8F6FF;
+  color: #FFADDE;
   margin-bottom: 20px;
   margin-top: 20px;
 }
