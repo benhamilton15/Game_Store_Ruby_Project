@@ -17,6 +17,7 @@ You should be able to add stock, which would have a Publisher and Game as well a
 
 
 <h4> MVP:</h4>
+
   * Create games with the quantity that are in stock
   * Create publishers
   * Show an inventory page listing games and publishers
