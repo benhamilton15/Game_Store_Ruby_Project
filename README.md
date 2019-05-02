@@ -1,4 +1,4 @@
-<h1> Running Instructions<h1>
+<h1> Running Instructions </h1>
 
 1. Create game_store db.
 2. create tables by running games.sql
@@ -8,7 +8,7 @@
 
 
 
-<h1>Brief
+<h1> Brief </h1>
 
 Game Store
 The owner of a Game Store wants an app which will help to keep on top of the store inventory. This is not an app that customers will see, but will be used to check stock levels and see what needs to be ordered soon.
@@ -29,7 +29,7 @@ Show a stock level for the inventory items e.g. High/Medium/Low
 
 
 
-Technologies
+<h1 Technologies </h1>
 
   * Ruby
     * pry
