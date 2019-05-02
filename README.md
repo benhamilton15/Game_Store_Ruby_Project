@@ -10,17 +10,17 @@
 
 <h1> Brief </h1>
 
-Game Store
+<h3>Game Store</h3>
 The owner of a Game Store wants an app which will help to keep on top of the store inventory. This is not an app that customers will see, but will be used to check stock levels and see what needs to be ordered soon.
 
 You should be able to add stock, which would have a Publisher and Game as well as the quantity available.
 
 
-MVP:
-Create games with the quantity that are in stock
-Create publishers
-Show an inventory page listing games and publishers
-Show a stock level for the inventory items e.g. High/Medium/Low
+<h3>MVP:</h3>
+  * Create games with the quantity that are in stock
+  * Create publishers
+  * Show an inventory page listing games and publishers
+  * Show a stock level for the inventory items e.g. High/Medium/Low
 
 
 
