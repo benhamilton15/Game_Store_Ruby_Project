@@ -29,7 +29,7 @@ Show a stock level for the inventory items e.g. High/Medium/Low
 
 
 
-<h1 Technologies </h1>
+<h1> Technologies </h1>
 
   * Ruby
     * pry
