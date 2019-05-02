@@ -16,7 +16,7 @@ The owner of a Game Store wants an app which will help to keep on top of the sto
 You should be able to add stock, which would have a Publisher and Game as well as the quantity available.
 
 
-<h3>MVP:</h3>
+<h5>MVP:</h5>
   * Create games with the quantity that are in stock
   * Create publishers
   * Show an inventory page listing games and publishers
